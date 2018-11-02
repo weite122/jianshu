@@ -20,6 +20,20 @@ export const Logo = styled.a.attrs({
   background-size: contain;
 `
 
+export const SearchWrapper = styled.div`
+  position: relative;
+  float: left;
+  .iconfont {
+    position: absolute;
+    right: 5px;
+    bottom: 4px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    text-align: center;
+  }
+`
+
 export const Nav = styled.div`
   width: 960px;
   height: 100%;
