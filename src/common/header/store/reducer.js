@@ -1,9 +1,9 @@
 import * as constants from './constants'
 import { fromJS } from 'immutable'
 
-const defaultState = {
+const defaultState = fromJS({
   focused: false
-}
+})
 
 export default (state = defaultState, action) => {
   if (action.type === constants.SEARCH_FOCUS) {
