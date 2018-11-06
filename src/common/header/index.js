@@ -12,22 +12,27 @@ import {actionCreators} from './store'
 
 class Header extends Component {
   getListArea() {
-    const {focused, list} = this.props
-    if (focused) {
+    const {focused, list, page, mouseIn, totalPage, handleMouseEnter, handleMouseLeave, handleChangePage} = this.props
+    const pageList = []
+    const newList = list.toJS()
+    if (newList) {
+      for (let i = page* 10; i < (page+1) * 10; i++ ) {
+        pageList.push(
+          <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
+        )
+      }
+    }
+    if (focused || mouseIn) {
       return (
-        <SearchInfo>
+        <SearchInfo onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           <SearchInfoTitle>
             热门搜索
-            <SearchInfoSwitch>
+            <SearchInfoSwitch onClick={() => handleChangePage(page, totalPage)}>
               换一批
             </SearchInfoSwitch>
           </SearchInfoTitle>
           <SearchInfoList>
-            {
-              list.map((item) => {
-                return <SearchInfoItem key={item}>{item}</SearchInfoItem>
-              })
-            }
+            {pageList}
           </SearchInfoList>
         </SearchInfo>
       )
@@ -81,7 +86,10 @@ class Header extends Component {
 const mapStateToProps = (state) => {
   return {
     focused: state.getIn(['header', 'focused']),
-    list: state.getIn(['header', 'list'])
+    list: state.getIn(['header', 'list']),
+    page: state.getIn(['header', 'page']),
+    totalPage: state.getIn(['header', 'totalPage']),
+    mouseIn: state.getIn(['header', 'mouseIn'])
   }
 }
 
@@ -93,6 +101,19 @@ const mapDispatchToProps = (dispatch) => {
     },
     handleInputBlur() {
       dispatch(actionCreators.searchBlur())
+    },
+    handleMouseEnter() {
+      dispatch(actionCreators.mouseEnter())
+    },
+    handleMouseLeave() {
+      dispatch(actionCreators.mouseLeave())
+    },
+    handleChangePage(page, totalPage) {
+      if (page < totalPage - 1) {
+        dispatch(actionCreators.changePage(page + 1))
+      }else {
+        dispatch(actionCreators.changePage(0))
+      }
     }
   }
 }
