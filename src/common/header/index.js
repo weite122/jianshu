@@ -15,7 +15,7 @@ class Header extends Component {
     const {focused, list, page, mouseIn, totalPage, handleMouseEnter, handleMouseLeave, handleChangePage} = this.props
     const pageList = []
     const newList = list.toJS()
-    if (newList) {
+    if (newList.length) {
       for (let i = page* 10; i < (page+1) * 10; i++ ) {
         pageList.push(
           <SearchInfoItem key={newList[i]}>{newList[i]}</SearchInfoItem>
@@ -43,7 +43,7 @@ class Header extends Component {
   }
 
   render() {
-    const { focused, handleInputFocus, handleInputBlur } = this.props
+    const { focused, handleInputFocus, handleInputBlur, list } = this.props
     return (
       <HeaderWrapper>
         <Logo></Logo>
@@ -61,7 +61,7 @@ class Header extends Component {
               classNames='slide'
             >
               <NavSearch
-                onFocus={handleInputFocus}
+                onFocus={() => handleInputFocus(list)}
                 onBlur={handleInputBlur}
                 className={focused ? 'focused' : ''}
               >
@@ -96,8 +96,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleInputFocus() {
-      dispatch(actionCreators.getList())
+    handleInputFocus(list) {
+     (list.size === 0) && dispatch(actionCreators.getList())
       dispatch(actionCreators.searchFocus())
     },
     handleInputBlur() {
