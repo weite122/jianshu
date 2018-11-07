@@ -4,15 +4,24 @@ import { GlobalFontstyle } from './statics/iconfont/iconfont'
 import Header from './common/header'
 import store from './store'
 import { Provider } from 'react-redux'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Globalstyle></Globalstyle>
-        <GlobalFontstyle></GlobalFontstyle>
+        <Globalstyle />
+        <GlobalFontstyle />
         <Provider store={store}>
-          <Header></Header>
+          <div>
+            <Header />
+            <BrowserRouter>
+              <div>
+                <Route path='/' exact render={() => <div>home</div>} />
+                <Route path='/detail' exact render={() => <div>detail</div>} />
+              </div>
+            </BrowserRouter>
+          </div>
         </Provider>
       </div>
     )
