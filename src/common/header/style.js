@@ -32,7 +32,7 @@ export const SearchWrapper = styled.div`
     border-radius: 15px;
     text-align: center;
     &.focused {
-      background: #777;
+      background: #969696;
       color: #fff;
     }
   }
@@ -85,13 +85,13 @@ export const NavSearch = styled.input.attrs({
 	  width: 240px;
 	}
 	&.slide-enter {
-    transition: all .2s ease-out;
+    transition: all .3s ease-out;
   }
   &.slide-enter-active {
     width: 240px;
   }
   &.slide-exit {
-    transition: all .2s ease-out;
+    transition: all .3s ease-out;
   }
   &.slide-exit-active {
     width: 160px;

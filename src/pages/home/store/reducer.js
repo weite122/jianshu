@@ -55,6 +55,22 @@ const defaultState = fromJS({
     title: "像超模刘雯一样健康减肥，吃得少不如吃的巧",
     desc: "女生喊得最多的话就是“我要减肥”新陈代谢这个生理现象真是不得不服。但女生减肥就像男人戒烟一样难，而且决心也很值得商榷。节食多日的小编，只不过多吃",
     imgUrl:"https://upload-images.jianshu.io/upload_images/13038478-ef4a0447cdfeae7e?imageMogr2/auto-orient/strip|imageView2/1/w/300/h/240"
+  }],
+  "recommendList": [{
+    "id": 1,
+    "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
+  }, {
+    "id": 2,
+    "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-4-b70da70d679593510ac93a172dfbaeaa.png"
+  }, {
+    "id": 3,
+    "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png"
+  }, {
+    "id": 4,
+    "imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
+  }, {
+    "id": 5,
+    "imgUrl": "//cdn2.jianshu.io/assets/web/banner-s-6-c4d6335bfd688f2ca1115b42b04c28a7.png"
   }]
 })
 

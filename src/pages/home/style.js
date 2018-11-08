@@ -17,7 +17,7 @@ export const HomeLeft = styled.div`
   }
 `
 export const HomeRight = styled.div`
-  width: 240px;
+  width: 280px;
   float: right;
 `
 export const TopicWrapper = styled.div`
@@ -83,4 +83,25 @@ export const ListInfo =	styled.div`
     -webkit-line-clamp: 3;
     overflow: hidden;
 	}
-`;
+`
+
+export const RecommendWrapper = styled.div`
+	margin: 30px 0;
+	width: 280px;
+`
+
+export const RecommendItem = styled.div`
+	width: 280px;
+	height: 50px;
+	background: url(${(props) => props.imgUrl});
+	background-size: contain;
+`
+
+export const WriterWrapper = styled.div`
+	width: 278px;
+	border: 1px solid #dcdcdc;
+	border-radius: 3px;
+	height: 300px;
+	line-height: 300px;
+	text-align: center;
+`
