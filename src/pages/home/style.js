@@ -101,7 +101,33 @@ export const WriterWrapper = styled.div`
 	width: 278px;
 	border: 1px solid #dcdcdc;
 	border-radius: 3px;
-	height: 300px;
-	line-height: 300px;
 	text-align: center;
+`
+
+export const DownloadApp = styled.div`
+    margin-bottom: 30px;
+    padding: 10px 22px;
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    background-color: #fff;
+    img {
+      width: 60px;
+      height: 60px;
+      opacity: .85;
+    }
+`
+export const DownloadInfo = styled.div`
+
+`
+export const DownloadTitle = styled.div`
+    font-size: 15px;
+    color: #333;
+`
+export const DownloadDescription = styled.div`
+    font-size: 15px;
+    color: #333;
+`
+export const RecommendWriter = styled.div`
+
 `
