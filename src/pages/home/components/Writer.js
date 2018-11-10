@@ -7,7 +7,7 @@ class Writer extends PureComponent {
     return (
       <WriterWrapper>
         <DownloadApp>
-          <img src="//cdn2.jianshu.io/assets/web/download-index-side-qrcode-cb13fc9106a478795f8d10f9f632fccf.png" alt=""/>
+          <img src="//i.loli.net/2018/11/10/5be6983800039.png" alt=""/>
           <DownloadInfo>
             <DownloadTitle>
               下载简书手机App

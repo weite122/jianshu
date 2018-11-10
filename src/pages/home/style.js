@@ -99,8 +99,6 @@ export const RecommendItem = styled.div`
 
 export const WriterWrapper = styled.div`
 	width: 278px;
-	border: 1px solid #dcdcdc;
-	border-radius: 3px;
 	text-align: center;
 `
 
@@ -115,19 +113,33 @@ export const DownloadApp = styled.div`
       width: 60px;
       height: 60px;
       opacity: .85;
+      float:left;
+    }
+    &::after{
+       content:" ";        
+       display:block;             
+       clear:both;     
     }
 `
 export const DownloadInfo = styled.div`
-
+  float: left;
+  margin-left: 7px;
+  text-align: left;
+  line-height: 24px;
+  padding: 7px;
 `
 export const DownloadTitle = styled.div`
-    font-size: 15px;
-    color: #333;
+  font-size: 15px;
+  color: #333;
 `
 export const DownloadDescription = styled.div`
-    font-size: 15px;
-    color: #333;
+    font-size: 13px;
+    color: #999;
 `
 export const RecommendWriter = styled.div`
-
+    margin-bottom: 20px;
+    padding-top: 0;
+    font-size: 13px;
+    text-align: center;
+    border: 1px solid red;
 `
