@@ -5,7 +5,8 @@ const defaultState = fromJS({
   topicList: [],
   articleList: [],
   recommendList: [],
-  articlePage: 1
+  articlePage: 1,
+  showScroll: false
 })
 
 export default (state = defaultState, action) => {
