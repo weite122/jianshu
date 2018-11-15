@@ -8,6 +8,8 @@ import {
 import {CSSTransition} from 'react-transition-group'
 import {connect} from 'react-redux'
 import {actionCreators} from './store'
+import { Link } from 'react-router-dom'
+
 
 
 class Header extends Component {
@@ -46,7 +48,9 @@ class Header extends Component {
     const { focused, handleInputFocus, handleInputBlur, list } = this.props
     return (
       <HeaderWrapper>
-        <Logo />
+        <Link to='/'>
+          <Logo />
+        </Link>
         <Nav>
           <NavItem className="left active">首页</NavItem>
           <NavItem className="left">下载App</NavItem>
