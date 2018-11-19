@@ -1,12 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { DetailWrapper, Header, Content } from "./style";
+import { LoginWrapper, LoginBox, Input, Button } from "./style";
 
 
 class Detail extends Component {
   render() {
     return (
-      <div>login</div>
+      <LoginWrapper>
+        <LoginBox>
+          <Input placeholder='账号' />
+          <Input placeholder='密码' />
+          <Button>登录</Button>
+        </LoginBox>
+      </LoginWrapper>
     )
   }
 
