@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import { LoginWrapper, LoginBox, Input, Button } from "./style";
+import { LoginWrapper, LoginBox, Input, Button } from "./style"
 import { actionCreators } from './store'
 
 class Detail extends Component {

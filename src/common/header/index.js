@@ -81,11 +81,13 @@ class Header extends Component {
           </SearchWrapper>
         </Nav>
         <Addition>
+          <Link to='/write'>
+            <Button className='writting'>
+              <i className="iconfont">&#xe615;</i>
+              写文章
+            </Button>
+            </Link>
           <Button className='reg'>注册</Button>
-          <Button className='writting'>
-            <i className="iconfont">&#xe615;</i>
-            写文章
-          </Button>
         </Addition>
       </HeaderWrapper>
     )
